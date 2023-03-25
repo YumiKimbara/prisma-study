@@ -5,6 +5,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// I can have only one database for one project
 datasource db {
   // this provider is where data is come from 
   // I set postgresql for data
@@ -17,6 +18,7 @@ datasource db {
 // npx prisma migrate dev -> this command will apply changes of database schema
 // everytime I migrate, prisma client will be updated.
 model User {
+  // name start with @ is the attributes
   id   Int    @id @default(autoincrement())
   name String
 }
